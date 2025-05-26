@@ -1,0 +1,33 @@
+{
+  "name": "datadome-encryption",
+  "version": "1.0.0",
+  "description": "DataDome encryption and decryption utilities for Node.js",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glizzykingdreko/datadome-encryption.git"
+  },
+  "bugs": {
+    "url": "https://github.com/glizzykingdreko/datadome-encryption/issues"
+  },
+  "homepage": "https://github.com/glizzykingdreko/datadome-encryption#readme",
+  "author": "GlizzyKingDreko <glizzykingdreko@protonmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "datadome",
+    "encryption",
+    "decryption",
+    "captcha",
+    "interstitial",
+    "takionapi"
+  ],
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node tests/validity_check.js",
+    "prepare": "echo 'Preparing for npm publish'"
+  }
+} 
