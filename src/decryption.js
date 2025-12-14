@@ -167,10 +167,10 @@ class DataDomeDecryptor {
     _decodeCustomBase64(encoded) {
         let bytes = [];
         let n = this.salt;
+        let i = 0;
 
-        for (let i = 0; i < encoded.length; i += 4) {
-            if (i + 3 >= encoded.length) break;
-
+        // Process full groups of 4 characters (3 bytes each)
+        while (i + 4 <= encoded.length) {
             let c1 = this._decode6Bits(encoded.charCodeAt(i));
             let c2 = this._decode6Bits(encoded.charCodeAt(i + 1));
             let c3 = this._decode6Bits(encoded.charCodeAt(i + 2));
@@ -181,16 +181,25 @@ class DataDomeDecryptor {
             bytes.push(((chunk >> 16) & 255) ^ (--n & 255));
             bytes.push(((chunk >> 8) & 255) ^ (--n & 255));
             bytes.push((chunk & 255) ^ (--n & 255));
-        }
-        return bytes;
-        if (this.challengeType === 'interstitial') {
-            return bytes;
+            i += 4;
         }
 
-        // Handle padding if needed
-        let mod = encoded.length % 4;
-        if (mod) {
-            bytes = bytes.slice(0, bytes.length - (3 - mod));
+        // Handle remaining characters (padding case)
+        let remaining = encoded.length - i;
+        if (remaining === 2) {
+            // 2 chars encode 1 byte
+            let c1 = this._decode6Bits(encoded.charCodeAt(i));
+            let c2 = this._decode6Bits(encoded.charCodeAt(i + 1));
+            let chunk = (c1 << 18) | (c2 << 12);
+            bytes.push(((chunk >> 16) & 255) ^ (--n & 255));
+        } else if (remaining === 3) {
+            // 3 chars encode 2 bytes
+            let c1 = this._decode6Bits(encoded.charCodeAt(i));
+            let c2 = this._decode6Bits(encoded.charCodeAt(i + 1));
+            let c3 = this._decode6Bits(encoded.charCodeAt(i + 2));
+            let chunk = (c1 << 18) | (c2 << 12) | (c3 << 6);
+            bytes.push(((chunk >> 16) & 255) ^ (--n & 255));
+            bytes.push(((chunk >> 8) & 255) ^ (--n & 255));
         }
 
         return bytes;
@@ -234,8 +243,8 @@ class DataDomeDecryptor {
             decodedBytes.push(b);
         }
 
-        // Convert to string for easier processing
-        const jsonStr = String.fromCharCode(...decodedBytes);
+        // Decode UTF-8 bytes properly (encryption encodes strings as UTF-8)
+        const jsonStr = utf8Decode(decodedBytes);
 
         // Now parse this string to extract entries
         return this._parseJsonString(jsonStr);
@@ -492,11 +501,3 @@ class DataDomeDecryptor {
         this.cidPrngSeed = this._cidPrngConstant ^ customHash(this.cid);
     }
 }
-
-module.exports = {
-    DataDomeDecryptor,
-    createPrng, // Exported for testing
-    utf8Decode, // Exported for testing
-    customHash,  // Exported for testing
-    PRNGHelper  // Exported for testing
-}; 
