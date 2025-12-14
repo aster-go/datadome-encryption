@@ -501,3 +501,5 @@ class DataDomeDecryptor {
         this.cidPrngSeed = this._cidPrngConstant ^ customHash(this.cid);
     }
 }
+
+module.exports = { DataDomeDecryptor };
