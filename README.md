@@ -7,15 +7,15 @@
   <img src="https://img.shields.io/badge/Type-Research-blue" alt="Type: Research">
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT">
   <a href="https://www.npmjs.com/package/datadome-encryption"><img src="https://img.shields.io/npm/v/datadome-encryption.svg?style=flat-square&color=cb3837&logo=npm" alt="npm version"></a>
-  <a href="https://github.com/GlizzyKingDreko/datadome-encryption"><img src="https://img.shields.io/github/stars/GlizzyKingDreko/datadome-encryption?style=flat-square&logo=github" alt="GitHub stars"></a>
-  <a href="https://github.com/GlizzyKingDreko/datadome-encryption"><img src="https://img.shields.io/badge/GitHub-Repo-black?logo=github&style=flat-square" alt="GitHub repo"></a>
+  <a href="https://github.com/aster-go/datadome-encryption"><img src="https://img.shields.io/github/stars/aster-go/datadome-encryption?style=flat-square&logo=github" alt="GitHub stars"></a>
+  <a href="https://github.com/aster-go/datadome-encryption"><img src="https://img.shields.io/badge/GitHub-Repo-black?logo=github&style=flat-square" alt="GitHub repo"></a>
 </div>
 
 <br>
 
 <div align="center">
-<a href="https://github.com/GlizzyKingDreko/datadome-encryption-python"><img src="https://img.shields.io/badge/Check%20the%20Python%20version-purple?logo=python&style=flat-square" alt="Check the Python version"></a>
-  <a href="https://medium.com/@glizzykingdreko/breaking-down-datadome-captcha-waf-d7b68cef3e21"><img src="https://img.shields.io/badge/Read%20the%20full%20article%20on%20Medium-12100E?logo=medium&logoColor=white&style=flat-square" alt="Read the full article on Medium"></a>
+<a href="https://github.com/aster-go/datadome-encryption-python"><img src="https://img.shields.io/badge/Check%20the%20Python%20version-purple?logo=python&style=flat-square" alt="Check the Python version"></a>
+  <a href="https://medium.com/@aster-go/breaking-down-datadome-captcha-waf-d7b68cef3e21"><img src="https://img.shields.io/badge/Read%20the%20full%20article%20on%20Medium-12100E?logo=medium&logoColor=white&style=flat-square" alt="Read the full article on Medium"></a>
   </div>
 <br>
 
@@ -350,17 +350,8 @@ This reverse engineering project serves as a case study in why organizations sho
 
 If you found this project helpful or interesting, consider starring the repo and following me for more security research and tools, or buy me a coffee to keep me up
 
-<p align="center">
-  <a href="https://github.com/GlizzyKingDreko"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-  <a href="https://twitter.com/GlizzyKingDreko"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"></a>
-  <a href="https://medium.com/@GlizzyKingDreko"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"></a>
-  <a href="https://discord.com/users/GlizzyKingDreko"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
-  <a href="mailto:glizzykingdreko@protonmail.com"><img src="https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white" alt="Email"></a>
-  <a href="https://buymeacoffee.com/glizzykingdreko"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-yellow?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me a Coffee"></a>
-</p>
-
 ---
 
 ## Contributing
 
-Contributions are welcome! Please open issues or pull requests on [GitHub](https://github.com/glizzykingdreko/datadome-encryption). For guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md) if present.
+Contributions are welcome! Please open issues or pull requests on [GitHub](https://github.com/aster-go/datadome-encryption). For guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md) if present.
